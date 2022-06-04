@@ -4,6 +4,7 @@ img{
 
 body{
     background-color: #ffff99;
+    justify-content: center;
 }
 
 span{
@@ -17,4 +18,41 @@ span{
 div{
     width: 100%;
     text-align: center;
+}
+
+table{
+    background-color: #cc99ff;
+}
+
+select{
+    font-family: 'Perpetua';
+    font-size: x-large;
+    color: #ff0066;
+    background-color: #6699ff;
+}
+
+hr{
+    border-width: medium;
+    border-color: #990099;
+    border-style: solid;
+}
+
+input{
+    font-family: 'Times New Roman';
+    color: #6600cc;
+    background-color: #ccccff;
+}
+
+p{
+    color: #008080;
+    text-decoration: blink;
+}
+
+.boton{
+    font: 'Adobe Gothic Std B';
+    font-size: large;
+    color: #009900;
+    background-color: #66ffcc;
+    border-color: #808000;
+
 }

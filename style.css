@@ -1,0 +1,20 @@
+img{
+    width: 60px;    
+}
+
+body{
+    background-color: #ffff99;
+}
+
+span{
+    font-family: Tahoma;
+    font-size:large;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #0000ff;
+}
+
+div{
+    width: 100%;
+    text-align: center;
+}

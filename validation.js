@@ -9,6 +9,29 @@ email.addEventListener("blur", validarEmail);
 let confirmationEmail = document.getElementById("confirmationEmail");
 confirmationEmail.addEventListener("blur", validarConfirmationEmail);
 let tarjeta = document.getElementsByName("tarjeta");
+let equipo = document.getElementById("equipo");
+equipo.addEventListener("change", calcularPrecio);
+let ubicacion = document.getElementById("ubicacion");
+ubicacion.addEventListener("change", calcularPrecio);
+let precio = document.getElementById("precio");
+
+
+
+function calcularPrecio() {
+    if (equipo.value == "1" && (ubicacion.value == "1" || ubicacion.value == "2")) {
+        precio.value = 200;
+    } else if (equipo.value == "1" && (ubicacion.value == "3" || ubicacion.value == "4")) {
+        precio.value = 300*5;
+    } else if (equipo.value == "2" && (ubicacion.value == "1" || ubicacion.value == "2")) {
+        precio.value = 150;
+    } else if (equipo.value == "2" && (ubicacion.value == "3" || ubicacion.value == "4")) {
+        precio.value = 150*5;
+    } else if (equipo.value == "3" && (ubicacion.value == "1" || ubicacion.value == "2")) {
+      precio.value = 170;
+    } else if (equipo.value == "3" && (ubicacion.value == "3" || ubicacion.value == "4")) { 
+      precio.value = 170*5;
+  }
+}
 
 const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
 const regexNombreApellido = /^[A-z]{3,25}$/;
@@ -121,10 +144,6 @@ form.addEventListener("submit", function (e){
     document.getElementById("errorNombre").innerHTML = "El nombre debe contener entre 3 y 25 caracteres";
   }
 
-
-
-
- 
   if (email.value == "") {
     error = true;
     mensajesError += "Debe ingresar un email\n";
@@ -136,8 +155,6 @@ form.addEventListener("submit", function (e){
     email.className = "error";
     document.getElementById("errorEmail").innerHTML = "Debe ingresar un email válido";
   }
-
-
 
   if (confirmationEmail.value == "") {
     error = true;

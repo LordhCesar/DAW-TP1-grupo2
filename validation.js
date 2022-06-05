@@ -66,6 +66,8 @@ function validarApellido() {
   };
 
 
+// let visa = document.getElementById("visa");
+// visa.addEventListener("click", clic);
 
 
 
@@ -87,26 +89,31 @@ form.addEventListener("submit", function (e){
     error = true;
     mensajesError += "Debe ingresar una cantidad de entradas\n";
     entradas.className = "error";
+    document.getElementById("errorEntradas").innerHTML = "Debe ingresar una cantidad de entradas";
   }
   if (apellido.value == "") {
     error = true;
     mensajesError += "Debe ingresar el apellido\n";
     apellido.className = "error";
+    document.getElementById("errorApellido").innerHTML = "Debe ingresar un apellido";
   }
   if (nombre.value == "") {
     error = true;
     mensajesError += "Debe ingresar el nombre\n";
     nombre.className = "error";
+    document.getElementById("errorNombre").innerHTML = "Debe ingresar un nombre";
   }
   if (email.value == "") {
     error = true;
     mensajesError += "Debe ingresar un email\n";
     email.className = "error";
+    document.getElementById("errorEmail").innerHTML = "Debe ingresar un email";
   }
   if (confirmationEmail.value == "") {
     error = true;
     mensajesError += "Debe confirmar el email ingresado\n";
     confirmationEmail.className = "error";
+    document.getElementById("errorConfirmationEmail").innerHTML = "Debe ingresar el email";
   }
 
 

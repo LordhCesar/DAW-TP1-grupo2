@@ -1,62 +1,84 @@
-const FORM = document.getElementById("form");
-FORM.onsubmit = function(e){ //variable e contiene el evento, se usa e por convencion
-    e.preventDefault(); //prevenir accion por defecto
-    let error = false;
-    let mensajesError = "";
-    resetear();
+const form = document.getElementById("form");
+form.addEventListener("submit", function (e){
 
+  e.preventDefault(); 
 
-    //logica de validacion
+  let error = false;
+  let mensajesError = "";
 
-    if(document.getElementById("nombre").value == ''){
-        error = true;
-        mensajesError += "<p>El campo nombre es obligatorio</p>"
-        document.getElementById("nombre").className = "error" //className agrega una clase
-    }
+  let entradas = document.getElementById("entradas");
+  let apellido = document.getElementById("apellido");
+  let nombre = document.getElementById("nombre");
+  let email = document.getElementById("email");
+  let confirmationEmail = document.getElementById("confirmationEmail");
 
-    if(document.getElementById("apellido").value.length == 0){
-        error = true;
-        mensajesError += "<p>El campo apellido es obligatorio</p>"
-        document.getElementById("apellido").className = "error" //className agrega una clase
-    }
-
-    if(document.getElementById("provincia").value == '0'){
-        error = true;
-        mensajesError += "<p>Selecciona una provincia</p>"
-    }
-
-    if(!document.getElementById("condiciones").checked){
-        error = true;
-        mensajesError += "<p>Es obligatorio que aceptes los terminos</p>"
-    }
-
-    // getEelementById es el unico que devueve un unico elemento, todos los demas getElements devuelven un array
-    let opciones = document.getElementsByName("sexo");
-    let seleccionado = false;
-    for(i in opciones){
-        if(opciones[i].checked){
-            seleccionado = true;
-        }
-    }
-    if(!seleccionado){
-        error = true;
-        mensajesError += "<p>Es obligatorio que indiques tu sexo</p>";
-    }
-
-    //si hay errorer que se muestren
-    //Si no los hay, que el formulario se envie
-    if(error){
-        document.getElementById("mensaje").innerHTML = mensajesError;
-    }else{
-        //this hace referencia a quien dispara el evento, o sea al objeto
-        this.submit();
-    }
+  if (entradas.value == "") {
+    error = true;
+    mensajesError += "Debe ingresar una cantidad de entradas\n";
+    entradas.className = "error";
+  }
+  if (apellido.value == "") {
+    error = true;
+    mensajesError += "Debe ingresar el apellido\n";
+    apellido.className = "error";
+  }
+  if (nombre.value == "") {
+    error = true;
+    mensajesError += "Debe ingresar el nombre\n";
+    nombre.className = "error";
+  }
+  if (email.value == "") {
+    error = true;
+    mensajesError += "Debe ingresar un email\n";
+    email.className = "error";
+  }
+  if (confirmationEmail.value == "") {
+    error = true;
+    mensajesError += "Debe confirmar el email ingresado\n";
+    confirmationEmail.className = "error";
+  }
 
 
 
 
-    function resetear(){
-        document.getElementById("nombre").className = ""
-        document.getElementById("apellido").className = ""
-    }
-}
+//   if (document.getElementById("apellido").value.length == 0) {
+//     error = true;
+//     mensajesError += "El campo apellido es obligatorio";
+//     document.getElementById("apellido").className = "error"; //className agrega una clase
+//   }
+
+//   if (document.getElementById("provincia").value == "0") {
+//     error = true;
+//     mensajesError += "Selecciona una provincia";
+//   }
+
+//   if (!document.getElementById("condiciones").checked) {
+//     error = true;
+//     mensajesError += "Es obligatorio que aceptes los terminos";
+//   }
+
+//   // getEelementById es el unico que devueve un unico elemento, todos los demas getElements devuelven un array
+//   let opciones = document.getElementsByName("sexo");
+//   let seleccionado = false;
+//   for (i in opciones) {
+//     if (opciones[i].checked) {
+//       seleccionado = true;
+//     }
+//   }
+//   if (!seleccionado) {
+//     error = true;
+//     mensajesError += "Es obligatorio que indiques tu sexo";
+//   }
+
+
+
+  //si hay errorer que se muestren
+  //Si no los hay, que el formulario se envie
+  if (error) {
+    alert(mensajesError);
+  } else {
+    this.submit();
+  }
+
+ 
+});

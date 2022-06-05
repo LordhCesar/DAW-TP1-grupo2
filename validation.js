@@ -8,7 +8,7 @@ let email = document.getElementById("email");
 email.addEventListener("blur", validarEmail);
 let confirmationEmail = document.getElementById("confirmationEmail");
 confirmationEmail.addEventListener("blur", validarConfirmationEmail);
-
+let tarjeta = document.getElementsByName("tarjeta");
 
 function validarEntradas() {
     if (entradas.value == "") {
@@ -66,25 +66,33 @@ function validarApellido() {
   };
 
 
-// let visa = document.getElementById("visa");
-// visa.addEventListener("click", clic);
+
+
+let visa = document.getElementById("visa");
+visa.addEventListener("click", function(){
+  alert("3 Cuotas sin interés")
+});
+
+let master = document.getElementById("master");
+master.addEventListener("click", function(){
+  alert("6 Cuotas sin interés")
+});
+
+let american = document.getElementById("american");
+american.addEventListener("click", function(){
+  alert("12 Cuotas sin interés")
+});
 
 
 
 const form = document.getElementById("form");
 form.addEventListener("submit", function (e){
-
+  
   e.preventDefault(); 
-
+  
   let error = false;
   let mensajesError = "";
-
-  let entradas = document.getElementById("entradas");
-  let apellido = document.getElementById("apellido");
-  let nombre = document.getElementById("nombre");
-  let email = document.getElementById("email");
-  let confirmationEmail = document.getElementById("confirmationEmail");
-
+  
   if (entradas.value == "") {
     error = true;
     mensajesError += "Debe ingresar una cantidad de entradas\n";
@@ -116,47 +124,38 @@ form.addEventListener("submit", function (e){
     document.getElementById("errorConfirmationEmail").innerHTML = "Debe ingresar el email";
   }
 
+  if (email.value == confirmationEmail.value) {
+    error = true;
+    mensajesError += "Los emails no coinciden\n";
+    email.className = "error";
+    confirmationEmail.className = "error";
+    document.getElementById("errorConfirmationEmail").innerHTML = "Los emails no coinciden";
+  }
+  
+  
+  let select = false;
+  for (i in tarjeta) {
+    if (tarjeta[i].checked) {
+      select = true;
+    }
+  }
+
+  if (!select) {
+    error = true;
+    mensajesError += "Debe seleccionar una tarjeta\n";
+    document.getElementById("errorTarjeta").innerHTML = "Debe seleccionar una tarjeta";
+  } else {
+    document.getElementById("errorTarjeta").innerHTML = "";
+  }
 
 
-
-//   if (document.getElementById("apellido").value.length == 0) {
-//     error = true;
-//     mensajesError += "El campo apellido es obligatorio";
-//     document.getElementById("apellido").className = "error"; //className agrega una clase
-//   }
-
-//   if (document.getElementById("provincia").value == "0") {
-//     error = true;
-//     mensajesError += "Selecciona una provincia";
-//   }
-
-//   if (!document.getElementById("condiciones").checked) {
-//     error = true;
-//     mensajesError += "Es obligatorio que aceptes los terminos";
-//   }
-
-//   // getEelementById es el unico que devueve un unico elemento, todos los demas getElements devuelven un array
-//   let opciones = document.getElementsByName("sexo");
-//   let seleccionado = false;
-//   for (i in opciones) {
-//     if (opciones[i].checked) {
-//       seleccionado = true;
-//     }
-//   }
-//   if (!seleccionado) {
-//     error = true;
-//     mensajesError += "Es obligatorio que indiques tu sexo";
-//   }
-
-
-
-  //si hay errorer que se muestren
-  //Si no los hay, que el formulario se envie
+  
   if (error) {
     alert(mensajesError);
   } else {
     this.submit();
   }
-
- 
+  
+  
 });
+

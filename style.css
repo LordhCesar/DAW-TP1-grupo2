@@ -62,5 +62,5 @@ form{
 }
 
 .error{
-    color: crimson;
+    background-color: crimson;
 }

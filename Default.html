@@ -11,132 +11,132 @@
 
 <body>
 
-    <form action="ConfirmacionGET.asp" method="get">
-    <table>
-        <tr>
-            <td colspan="4">
-                <div>
-                    <P class="texto">ENTRADAS-TEK</P>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="equipo"><span>Encuentros</span> </label>
-            </td>
-            <td>
-                <select name="equipo" id="equipo" required >
-                    <option value="1">Barcelona - Ath. Bilbao</option>
-                    <option value="2">Real Madrid - Sp. Gijón</option>
-                    <option value="3">Dep. La Coruña - Sevilla</option>
-                </select>
-            </td>
-            <td>
-                <label for="ubicacion"><span>Ubicación</span> </label>
-            </td>
-            <td>
-                <select name="ubicacion" id="ubicacion" required >
-                    <option value="1">Popular Local</option>
-                    <option value="2">Popular Visitante</option>
-                    <option value="3">Platea Local</option>
-                    <option value="4">Platea Visitante</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td> <label for="entradas"><span>Cantidad de entradas</span> </label></td>
-            <td><input name="entradas" type="number" id="entradas" required ></td>
-            <td><label for="precio"><span>Precio</span> </label></td>
-            <td><input name="precio" type="number" id="precio" required ></td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <div>
-                    <p class="texto">INFORMACIÓN DE PAGO</P>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="apellido"><span>Apellido</span> </label></td>
-            <td><input name="apellido" type="text" id="apellido" required ></td>
-            <td><label for="nombre"><span>Nombre</span> </label></td>
-            <td><input name="nombre" type="text" id="nombre" required ></td>
-        </tr>
-        <tr>
-            <td><label for="email"><span>E-Mail</span> </label></td>
-            <td><input name="email" type="email" id="email" required ></td>
-            <td>
-                <label for="confirmationEmail"><span>Confirmar E-Mail</span> </label>
-            </td>
-            <td><input name="confirmationEmail" type="email" id="confirmationEmail" required ></td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <div>
-                <p class="texto">SELECCIONE TARJETA DE CREDITO</P>
-            </div>
+    <form action="ConfirmacionGET.asp" method="get" id="form">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <div>
+                        <P class="texto">ENTRADAS-TEK</P>
+                    </div>
                 </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-    
-            <th rowspan="2" colspan="4">
-                <img src="./img/Visa.png" alt="">
-                <img src="./img/MasterCard.png" alt="">
-                <img src="./img/American.png" alt="">
-                <br>
-                <input type="radio" name="tarjeta" id="tarjeta" value="Visa" required>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="tarjeta" id="tarjeta" value="MasterCard">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="tarjeta" id="tarjeta" value="AmericanExpress">
-            </th>    
-            
-        </tr>
-        <tr>
-            <th> </th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <hr>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="4">
-                <button type="submit" value="Aceptar" class="boton">Aceptar</button>
-                <button type="reset" value="Limpiar" class="boton">Limpiar</button>
-            </td>
-            
-        </tr>
-    </table>
-    </form>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="equipo"><span>Encuentros</span> </label>
+                </td>
+                <td>
+                    <select name="equipo" id="equipo" required>
+                        <option value="1">Barcelona - Ath. Bilbao</option>
+                        <option value="2">Real Madrid - Sp. Gijón</option>
+                        <option value="3">Dep. La Coruña - Sevilla</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="ubicacion"><span>Ubicación</span> </label>
+                </td>
+                <td>
+                    <select name="ubicacion" id="ubicacion" required>
+                        <option value="1">Popular Local</option>
+                        <option value="2">Popular Visitante</option>
+                        <option value="3">Platea Local</option>
+                        <option value="4">Platea Visitante</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="entradas"><span>Cantidad de entradas</span> </label></td>
+                <td><input name="entradas" type="number" id="entradas" required></td>
+                <td><label for="precio"><span>Precio</span> </label></td>
+                <td><input name="precio" type="number" id="precio" required></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div>
+                        <p class="texto">INFORMACIÓN DE PAGO</P>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="apellido"><span>Apellido</span> </label></td>
+                <td><input name="apellido" type="text" id="apellido" required></td>
+                <td><label for="nombre"><span>Nombre</span> </label></td>
+                <td><input name="nombre" type="text" id="nombre" required></td>
+            </tr>
+            <tr>
+                <td><label for="email"><span>E-Mail</span> </label></td>
+                <td><input name="email" type="email" id="email" required></td>
+                <td>
+                    <label for="confirmationEmail"><span>Confirmar E-Mail</span> </label>
+                </td>
+                <td><input name="confirmationEmail" type="email" id="confirmationEmail" required></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div>
+                        <p class="texto">SELECCIONE TARJETA DE CREDITO</P>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
 
+                <th rowspan="2" colspan="4">
+                    <img src="./img/Visa.png" alt="">
+                    <img src="./img/MasterCard.png" alt="">
+                    <img src="./img/American.png" alt="">
+                    <br>
+                    <input type="radio" name="tarjeta" id="tarjeta" value="Visa" required>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="tarjeta" id="tarjeta" value="MasterCard">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="tarjeta" id="tarjeta" value="AmericanExpress">
+                </th>
+
+            </tr>
+            <tr>
+                <th> </th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="4">
+                    <button type="submit" value="Aceptar" class="boton">Aceptar</button>
+                    <button type="reset" value="Limpiar" class="boton">Limpiar</button>
+                    </td>
+
+            </tr>
+        </table>
+    </form>
+    <script src="validation.js"></script>
 </body>
 
 </html>

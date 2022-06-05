@@ -30,7 +30,7 @@
                     <label for="equipo"><span>Encuentros</span> </label>
                 </td>
                 <td>
-                    <select name="equipo" id="equipo" >
+                    <select name="equipo" id="equipo">
                         <option value="1">Barcelona - Ath. Bilbao</option>
                         <option value="2">Real Madrid - Sp. Gijón</option>
                         <option value="3">Dep. La Coruña - Sevilla</option>
@@ -40,7 +40,7 @@
                     <label for="ubicacion"><span>Ubicación</span> </label>
                 </td>
                 <td>
-                    <select name="ubicacion" id="ubicacion" >
+                    <select name="ubicacion" id="ubicacion">
                         <option value="1">Popular Local</option>
                         <option value="2">Popular Visitante</option>
                         <option value="3">Platea Local</option>
@@ -50,13 +50,15 @@
             </tr>
             <tr>
                 <td> <label for="entradas"><span>Cantidad de entradas</span> </label></td>
-                <td><input name="entradas" type="number" id="entradas" ></td>
+                <td><input name="entradas" type="number" id="entradas"></td>
                 <td><label for="precio"><span>Precio</span> </label></td>
                 <td><input name="precio" value="200" type="number" id="precio" readonly></td>
             </tr>
             <tr>
                 <td></td>
-                <td><p id="errorEntradas" class="errorText"></p></td>
+                <td>
+                    <p id="errorEntradas" class="errorText"></p>
+                </td>
                 <td></td>
                 <td></td>
             </tr>
@@ -69,38 +71,46 @@
                 <td colspan="4">
                     <div>
                         <p class="texto">INFORMACIÓN DE PAGO</P>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
+                    </div>
+                </td>
+            </tr>
+            <tr>
                 <td colspan="4">
                     <hr>
                 </td>
             </tr>
             <tr>
                 <td><label for="apellido"><span>Apellido</span> </label></td>
-                <td><input name="apellido" type="text" id="apellido" ></td>
+                <td><input name="apellido" type="text" id="apellido"></td>
                 <td><label for="nombre"><span>Nombre</span> </label></td>
-                <td><input name="nombre" type="text" id="nombre" ></td>
+                <td><input name="nombre" type="text" id="nombre"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><p id="errorApellido" class="errorText"></p></td>
+                <td>
+                    <p id="errorApellido" class="errorText"></p>
+                </td>
                 <td></td>
-                <td><p id="errorNombre" class="errorText"></p></td>
+                <td>
+                    <p id="errorNombre" class="errorText"></p>
+                </td>
             </tr>
             <tr>
                 <td><label for="email"><span>E-Mail</span> </label></td>
-                <td><input name="email" type="email" id="email" ></td>
+                <td><input name="email" type="email" id="email"></td>
                 <td>
                     <label for="confirmationEmail"><span>Confirmar E-Mail</span> </label>
                 </td>
-                <td><input name="confirmationEmail" type="email" id="confirmationEmail" ></td>
+                <td><input name="confirmationEmail" type="email" id="confirmationEmail"></td>
             </tr>
             <td></td>
-            <td><p id="errorEmail" class="errorText"></p></td>
+            <td>
+                <p id="errorEmail" class="errorText"></p>
+            </td>
             <td></td>
-            <td><p id="errorConfirmationEmail" class="errorText"></p></td>
+            <td>
+                <p id="errorConfirmationEmail" class="errorText"></p>
+            </td>
             <tr>
                 <td colspan="4">
                     <hr>
@@ -125,7 +135,7 @@
                     <img id="master" src="./img/MasterCard.png" alt="">
                     <img id="american" src="./img/American.png" alt="">
                     <br>
-                    <input type="radio" name="tarjeta" id="tVisa" value="Visa" >
+                    <input type="radio" name="tarjeta" id="tVisa" value="Visa">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="tarjeta" id="tMaster" value="MasterCard">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

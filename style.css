@@ -1,70 +1,69 @@
-img{
-    width: 60px;    
+img {
+  width: 60px;
 }
 
-body{
-    background-color: #ffff99;
-    justify-content: center;
+body {
+  background-color: #ffff99;
+  justify-content: center;
 }
 
-span{
-    font-family: Tahoma;
-    font-size:large;
-    font-weight: 100;
-    text-transform: capitalize;
-    color: #0000ff;
+span {
+  font-family: Tahoma;
+  font-size: large;
+  font-weight: 100;
+  text-transform: capitalize;
+  color: #0000ff;
 }
 
-div{
-    width: 100%;
-    text-align: center;
+div {
+  width: 100%;
+  text-align: center;
 }
 
-table{
-    background-color: #cc99ff;
+table {
+  background-color: #cc99ff;
 }
 
-select{
-    font-family: 'Perpetua';
-    font-size: x-large;
-    color: #ff0066;
-    background-color: #6699ff;
+select {
+  font-family: "Perpetua";
+  font-size: x-large;
+  color: #ff0066;
+  background-color: #6699ff;
 }
 
-hr{
-    border-width: medium;
-    border-color: #990099;
-    border-style: solid;
+hr {
+  border-width: medium;
+  border-color: #990099;
+  border-style: solid;
 }
 
-input{
-    font-family: 'Times New Roman';
-    color: #6600cc;
-    background-color: #ccccff;
+input {
+  font-family: "Times New Roman";
+  color: #6600cc;
+  background-color: #ccccff;
 }
 
-p{
-    color: #008080;
-    text-decoration: blink;
+p {
+  color: #008080;
+  text-decoration: blink;
 }
 
-.boton{
-    font: 'Adobe Gothic Std B';
-    font-size: large;
-    color: #009900;
-    background-color: #66ffcc;
-    border-color: #808000;
-
+.boton {
+  font: "Adobe Gothic Std B";
+  font-size: large;
+  color: #009900;
+  background-color: #66ffcc;
+  border-color: #808000;
 }
 
-form{
-    text-align: center;
+form {
+  text-align: center;
 }
 
-.error{
-    background-color: crimson;
+.error {
+  background-color: crimson;
 }
 
-.errorText{
-    color: rgb(172, 22, 22);
+.errorText {
+  color: rgb(172, 22, 22);
 }

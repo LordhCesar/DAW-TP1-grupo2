@@ -13,26 +13,32 @@ confirmationEmail.addEventListener("blur", validarConfirmationEmail);
 function validarEntradas() {
     if (entradas.value == "") {
         entradas.className = "error";
-        alert("Debe ingresar una cantidad de entradas");
-    }else{
+        document.getElementById("errorEntradas").innerHTML = "Debe ingresar una cantidad de entradas";
+        // alert("Debe ingresar una cantidad de entradas");
+      }else{
         entradas.className = "";
+        document.getElementById("errorEntradas").innerHTML = "";
     }
   };
 
 function validarApellido() {
     if (apellido.value == "") {
         apellido.className = "error";
-        alert("Debe ingresar un apellido");
+        document.getElementById("errorApellido").innerHTML = "Debe ingresar un apellido";
+        // alert("Debe ingresar un apellido");
     }else{
         apellido.className = "";
+        document.getElementById("errorApellido").innerHTML = "";
     }
   };
 
   function validarNombre() {
     if (nombre.value == "") {
         nombre.className = "error";
-        alert("Debe ingresar un nombre");
+        document.getElementById("errorNombre").innerHTML = "Debe ingresar un nombre";
+        // alert("Debe ingresar un nombre");
     }else{  
+      document.getElementById("errorNombre").innerHTML = "";
         nombre.className = "";
     }
   };
@@ -40,8 +46,10 @@ function validarApellido() {
   function validarEmail() {
     if (email.value == "") {
         email.className = "error";
-        alert("Debe ingresar un email");
+        document.getElementById("errorEmail").innerHTML = "Debe ingresar un email";
+        // alert("Debe ingresar un email");
     }else{
+        document.getElementById("errorEmail").innerHTML = "";
         email.className = "";
     }
   };
@@ -49,12 +57,14 @@ function validarApellido() {
   function validarConfirmationEmail() {
     if (confirmationEmail.value == "") {
         confirmationEmail.className = "error";
-        alert("Debe confirmar el email");
+        document.getElementById("errorConfirmationEmail").innerHTML = "Debe ingresar el email";
+        // alert("Debe ingresar el email");
     }else{
+        document.getElementById("errorConfirmationEmail").innerHTML = "";
         confirmationEmail.className = "";
     }
   };
-  
+
 
 
 

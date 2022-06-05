@@ -131,7 +131,14 @@ form.addEventListener("submit", function (e){
     mensajesError += "Debe ingresar el apellido\n";
     apellido.className = "error";
     document.getElementById("errorApellido").innerHTML = "Debe ingresar un apellido";
+  } else if (!regexNombreApellido.test(apellido.value)) {
+    error = true;
+    mensajesError += "El apellido debe contener entre 3 y 25 caracteres\n";
+    apellido.className = "error";
+    document.getElementById("errorApellido").innerHTML = "El apellido debe contener entre 3 y 25 caracteres\n";
   }
+
+
   if (nombre.value == "") {
     error = true;
     mensajesError += "Debe ingresar el nombre\n";

@@ -39,23 +39,23 @@
         ubicaciones(2)="Platea Local"
         ubicaciones(3)="Platea Visitante"
         dim equipo
-        equipo = request.QueryString("equipo")
+        equipo = request.Form("equipo")
         dim ubicacion
-        ubicacion = request.QueryString("ubicacion")
+        ubicacion = request.Form("ubicacion")
         dim entradas
-        entradas = request.QueryString("entradas")
+        entradas = request.Form("entradas")
         dim precio
-        precio = request.QueryString("precio")
+        precio = request.Form("precio")
         dim nombre
-        nombre = request.QueryString("nombre")
+        nombre = request.Form("nombre")
         dim apellido
-        apellido = request.QueryString("apellido")
+        apellido = request.Form("apellido")
         dim email
-        email = request.QueryString("email")
+        email = request.Form("email")
         dim confirmationEmail
-        confirmationEmail = request.QueryString("confirmationEmail")
+        confirmationEmail = request.Form("confirmationEmail")
         dim tarjeta
-        tarjeta = request.QueryString("tarjeta")
+        tarjeta = request.Form("tarjeta")
         dim precioFinal
         precioFinal = precio * entradas
     %>
@@ -78,7 +78,7 @@
     </div>
 
 
-  <img src="./img/QRcode.PNG" alt="QR" width="100" height="100">
+  <a href="Finalizacion.asp"><img src="./img/QRcode.PNG" alt="QR" width="100" height="100"></a>
 
   </body>
 </html>

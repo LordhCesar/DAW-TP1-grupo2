@@ -1,8 +1,7 @@
 const form = document.getElementById("form");
-form.addEventListener("submit", enviar(e));
+form.addEventListener("submit", function (e){
 
-function enviar(e) {
-  e.preventDefault(); //prevenir accion por defecto
+  e.preventDefault(); 
 
   let error = false;
   let mensajesError = "";
@@ -15,27 +14,27 @@ function enviar(e) {
 
   if (entradas.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar una cantidad de entradas</p>";
+    mensajesError += "Debe ingresar una cantidad de entradas\n";
     entradas.className = "error";
   }
   if (apellido.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar el apellido</p>";
+    mensajesError += "Debe ingresar el apellido\n";
     apellido.className = "error";
   }
   if (nombre.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar el nombre</p>";
+    mensajesError += "Debe ingresar el nombre\n";
     nombre.className = "error";
   }
   if (email.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar un email</p>";
+    mensajesError += "Debe ingresar un email\n";
     email.className = "error";
   }
   if (confirmationEmail.value == "") {
     error = true;
-    mensajesError += "<p>Debe confirmar el email ingresado</p>";
+    mensajesError += "Debe confirmar el email ingresado\n";
     confirmationEmail.className = "error";
   }
 
@@ -44,18 +43,18 @@ function enviar(e) {
 
 //   if (document.getElementById("apellido").value.length == 0) {
 //     error = true;
-//     mensajesError += "<p>El campo apellido es obligatorio</p>";
+//     mensajesError += "El campo apellido es obligatorio";
 //     document.getElementById("apellido").className = "error"; //className agrega una clase
 //   }
 
 //   if (document.getElementById("provincia").value == "0") {
 //     error = true;
-//     mensajesError += "<p>Selecciona una provincia</p>";
+//     mensajesError += "Selecciona una provincia";
 //   }
 
 //   if (!document.getElementById("condiciones").checked) {
 //     error = true;
-//     mensajesError += "<p>Es obligatorio que aceptes los terminos</p>";
+//     mensajesError += "Es obligatorio que aceptes los terminos";
 //   }
 
 //   // getEelementById es el unico que devueve un unico elemento, todos los demas getElements devuelven un array
@@ -68,7 +67,7 @@ function enviar(e) {
 //   }
 //   if (!seleccionado) {
 //     error = true;
-//     mensajesError += "<p>Es obligatorio que indiques tu sexo</p>";
+//     mensajesError += "Es obligatorio que indiques tu sexo";
 //   }
 
 
@@ -76,12 +75,10 @@ function enviar(e) {
   //si hay errorer que se muestren
   //Si no los hay, que el formulario se envie
   if (error) {
-    //document.getElementById("mensaje").innerHTML = mensajesError;
     alert(mensajesError);
   } else {
-    //this hace referencia a quien dispara el evento, o sea al objeto
     this.submit();
   }
 
  
-}
+});

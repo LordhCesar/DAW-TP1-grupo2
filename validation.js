@@ -10,6 +10,10 @@ let confirmationEmail = document.getElementById("confirmationEmail");
 confirmationEmail.addEventListener("blur", validarConfirmationEmail);
 let tarjeta = document.getElementsByName("tarjeta");
 
+const regexEmail = /^[0-9a-zA-Z._.-]+\@[0-9a-zA-Z._.-]+\.[0-9a-zA-Z]+$/;
+const regexNombreApellido = /^[A-z]{3,25}$/;
+
+
 function validarEntradas() {
     if (entradas.value == "") {
         entradas.className = "error";
@@ -110,29 +114,52 @@ form.addEventListener("submit", function (e){
     mensajesError += "Debe ingresar el nombre\n";
     nombre.className = "error";
     document.getElementById("errorNombre").innerHTML = "Debe ingresar un nombre";
+  }else if (!regexNombreApellido.test(nombre.value)) {
+    error = true;
+    mensajesError += "El nombre debe contener entre 3 y 25 caracteres\n";
+    nombre.className = "error";
+    document.getElementById("errorNombre").innerHTML = "El nombre debe contener entre 3 y 25 caracteres";
   }
+
+
+
+
+ 
   if (email.value == "") {
     error = true;
     mensajesError += "Debe ingresar un email\n";
     email.className = "error";
     document.getElementById("errorEmail").innerHTML = "Debe ingresar un email";
+  }else if (!regexEmail.test(email.value)) {
+    error = true;
+    mensajesError += "Debe ingresar un email válido\n";
+    email.className = "error";
+    document.getElementById("errorEmail").innerHTML = "Debe ingresar un email válido";
   }
+
+
+
   if (confirmationEmail.value == "") {
     error = true;
     mensajesError += "Debe confirmar el email ingresado\n";
     confirmationEmail.className = "error";
     document.getElementById("errorConfirmationEmail").innerHTML = "Debe ingresar el email";
+  } else if (!regexEmail.test(confirmationEmail.value)) {
+    error = true;
+    mensajesError += "Debe ingresar el email válido\n";
+    confirmationEmail.className = "error";
+    document.getElementById("errorConfirmationEmail").innerHTML = "Debe ingresar el email válido";
   }
 
-  if (email.value == confirmationEmail.value) {
+  if (email.value != confirmationEmail.value) {
     error = true;
     mensajesError += "Los emails no coinciden\n";
     email.className = "error";
     confirmationEmail.className = "error";
     document.getElementById("errorConfirmationEmail").innerHTML = "Los emails no coinciden";
   }
-  
-  
+
+ 
   let select = false;
   for (i in tarjeta) {
     if (tarjeta[i].checked) {

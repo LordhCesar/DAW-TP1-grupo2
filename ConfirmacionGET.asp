@@ -78,7 +78,7 @@
     </div>
 
 
-  <img src="./img/QRcode.PNG" alt="QR" width="100" height="100">
+	<a href="Finalizacion.asp"><img src="./img/QRcode.PNG" alt="QR" width="100" height="100"></a>
 
   </body>
 </html>

@@ -9,13 +9,9 @@ let confirmationEmail = document.getElementById("confirmationEmail");
 function validarEntradas() {
     if (entradas.value == "") {
         entradas.className = "error";
-        
-
-    } else {
-        entradas.style.border = "1px solid green";
         alert("Debe ingresar una cantidad de entradas")
-    }
-}
+    } 
+
 
 
 

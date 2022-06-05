@@ -1,17 +1,17 @@
 const form = document.getElementById("form");
-form.addEventListener("submit", enviar);
+form.addEventListener("submit", enviar(e));
 
-function enviar() {
+function enviar(e) {
   e.preventDefault(); //prevenir accion por defecto
 
   let error = false;
   let mensajesError = "";
 
-  const entradas = document.getElementById("entradas");
-  const apellido = document.getElementById("apellido");
-  const nombre = document.getElementById("nombre");
-  const email = document.getElementById("email");
-  const confirmationEmail = document.getElementById("confirmationEmail");
+  let entradas = document.getElementById("entradas");
+  let apellido = document.getElementById("apellido");
+  let nombre = document.getElementById("nombre");
+  let email = document.getElementById("email");
+  let confirmationEmail = document.getElementById("confirmationEmail");
 
   if (entradas.value == "") {
     error = true;
@@ -25,17 +25,17 @@ function enviar() {
   }
   if (nombre.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar una cantidad de entradas</p>";
+    mensajesError += "<p>Debe ingresar el nombre</p>";
     nombre.className = "error";
   }
   if (email.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar una cantidad de entradas</p>";
+    mensajesError += "<p>Debe ingresar un email</p>";
     email.className = "error";
   }
   if (confirmationEmail.value == "") {
     error = true;
-    mensajesError += "<p>Debe ingresar una cantidad de entradas</p>";
+    mensajesError += "<p>Debe confirmar el email ingresado</p>";
     confirmationEmail.className = "error";
   }
 
@@ -76,7 +76,8 @@ function enviar() {
   //si hay errorer que se muestren
   //Si no los hay, que el formulario se envie
   if (error) {
-    document.getElementById("mensaje").innerHTML = mensajesError;
+    //document.getElementById("mensaje").innerHTML = mensajesError;
+    alert(mensajesError);
   } else {
     //this hace referencia a quien dispara el evento, o sea al objeto
     this.submit();

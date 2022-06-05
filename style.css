@@ -60,3 +60,7 @@ p{
 form{
     text-align: center;
 }
+
+.error{
+    color: crimson;
+}

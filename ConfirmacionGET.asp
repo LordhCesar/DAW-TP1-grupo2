@@ -1,13 +1,13 @@
 <%
-    response.cookies("equipo")=request.Form("equipo")
-    response.cookies("ubicacion")=request.Form("ubicacion")
-    response.cookies("entradas")=request.Form("entradas")
-    response.cookies("precio")=request.Form("precio")
-    response.cookies("nombre")=request.Form("nombre")
-    response.cookies("apellido")=request.Form("apellido")
-    response.cookies("email")=request.Form("email")
-    response.cookies("confirmationEmail")=request.Form("confirmationEmail")
-    response.cookies("tarjeta")=request.Form("tarjeta")
+    response.cookies("equipo")=request.QueryString("equipo")
+    response.cookies("ubicacion")=request.QueryString("ubicacion")
+    response.cookies("entradas")=request.QueryString("entradas")
+    response.cookies("precio")=request.QueryString("precio")
+    response.cookies("nombre")=request.QueryString("nombre")
+    response.cookies("apellido")=request.QueryString("apellido")
+    response.cookies("email")=request.QueryString("email")
+    response.cookies("confirmationEmail")=request.QueryString("confirmationEmail")
+    response.cookies("tarjeta")=request.QueryString("tarjeta")
 %>
 <!DOCTYPE html>
 <html lang="es">

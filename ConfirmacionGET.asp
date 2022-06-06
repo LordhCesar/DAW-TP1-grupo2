@@ -2,7 +2,6 @@
     response.cookies("equipo")=request.QueryString("equipo")
     response.cookies("ubicacion")=request.QueryString("ubicacion")
     response.cookies("entradas")=request.QueryString("entradas")
-    response.cookies("precio")=request.QueryString("precio")
     response.cookies("nombre")=request.QueryString("nombre")
     response.cookies("apellido")=request.QueryString("apellido")
     response.cookies("email")=request.QueryString("email")
@@ -58,6 +57,7 @@
         tarjeta = request.QueryString("tarjeta")
         dim precioFinal
         precioFinal = precio * entradas
+        response.cookies("precio")=precioFinal
     %>
 
     <div class="center">

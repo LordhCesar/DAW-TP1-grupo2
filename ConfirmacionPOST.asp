@@ -2,7 +2,6 @@
     response.cookies("equipo")=request.Form("equipo")
     response.cookies("ubicacion")=request.Form("ubicacion")
     response.cookies("entradas")=request.Form("entradas")
-    response.cookies("precio")=request.Form("precio")
     response.cookies("nombre")=request.Form("nombre")
     response.cookies("apellido")=request.Form("apellido")
     response.cookies("email")=request.Form("email")
@@ -58,6 +57,7 @@
         tarjeta = request.Form("tarjeta")
         dim precioFinal
         precioFinal = precio * entradas
+        response.cookies("precio")=precioFinal
     %>
 
     <div class="center">
